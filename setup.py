@@ -16,9 +16,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    packages=[
-        'epitech_api',
-    ],
+    packages=find_packages(),
     install_requires=[
         'arrow',                # For better date handling
         'requests',             # For HTTP requests
