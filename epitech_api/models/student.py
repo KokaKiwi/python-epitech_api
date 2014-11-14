@@ -22,9 +22,9 @@ class Student(SimpleModel):
     promotion = create_getter('promo')
     promo = promotion
 
-    @property
-    def picture_url(self):
-        return Student.PICTURE_URL.format(login=self.login)
+    picture_url = create_getter('picture')
+
+    email = create_getter('internal_email')
 
     @property
     def miniature_picture_url(self):
