@@ -1,7 +1,7 @@
 import logging
 from ..util import cached_property
 
-__all__ = ['student', 'netsoul', 'marks']
+__all__ = ['student', 'netsoul', 'marks', 'planning']
 
 # Base classes
 class Model(object):
@@ -56,3 +56,4 @@ def array_map_filter(f):
 from .student import Student
 from .netsoul import NetsoulStats
 from .marks import Marks
+from .planning import Planning

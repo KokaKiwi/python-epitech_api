@@ -77,6 +77,11 @@ class EpitechAPI(object):
         from .models import Student
         return Student(self, self.credentials.login)
 
+    @cached_property
+    def planning(self, **kwargs):
+        from .models import Planning
+        return Planning(self, **kwargs)
+
     @staticmethod
     def validate(login, password):
         api = EpitechAPI(login, password)
