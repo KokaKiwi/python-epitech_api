@@ -1,6 +1,5 @@
 import logging
 import requests
-from memory_profiler import profile
 from cached_property import cached_property
 
 class Credentials(object):
