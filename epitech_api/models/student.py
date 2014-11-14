@@ -12,7 +12,7 @@ class Student(SimpleModel):
         self.login = login
 
     @property
-    def url(self):
+    def req_url(self):
         return Student.INTRA_PATH.format(login=self.login)
 
     first_name = create_getter('firstname')

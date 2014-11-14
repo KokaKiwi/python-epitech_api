@@ -45,11 +45,13 @@ class EpitechAPI(object):
         self.credentials = Credentials(login, password)
         self.logger = logging.getLogger('EpitechAPI')
 
-    def request(self, path='/', data=None):
-        url = EpitechAPI.BASE_URL + path + '?format=json'
+    def request(self, path='/', data=None, params=None):
+        url = EpitechAPI.BASE_URL + path
 
         self.logger.debug('REQUEST: %s' % (url))
-        r = requests.post(url, data=data, cookies=self.credentials.cookies)
+        params = params if params else {}
+        params['format'] = 'json'
+        r = requests.post(url, data=data, cookies=self.credentials.cookies, params=params)
         r.raise_for_status()
 
         return APIResponse(r)

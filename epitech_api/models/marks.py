@@ -54,7 +54,7 @@ class Marks(SimpleModel):
         self.login = login
 
     @property
-    def url(self):
+    def req_url(self):
         return Marks.INTRA_PATH.format(login=self.login)
 
     @cached_property

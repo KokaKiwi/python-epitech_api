@@ -25,7 +25,7 @@ class NetsoulStats(SimpleModel):
         self.login = login
 
     @property
-    def url(self):
+    def req_url(self):
         return NetsoulStats.INTRA_PATH.format(login=self.login)
 
     @property

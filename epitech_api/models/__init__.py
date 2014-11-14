@@ -11,6 +11,10 @@ class Model(object):
         self.logger = logging.getLogger(self.__class__.__name__)
 
 class SimpleModel(Model):
+    req_url = None
+    req_data = None
+    req_params = None
+
     def __init__(self, api):
         super().__init__(api)
 
@@ -19,7 +23,7 @@ class SimpleModel(Model):
 
     @cached_property
     def data(self):
-        res = self.api.request(self.url)
+        res = self.api.request(self.req_url, data=self.req_data, params=self.req_params)
         return res.json()
 
     def reset_data_cache(self):
