@@ -1,3 +1,3 @@
-__all__ = ['api', 'models']
+__all__ = ['api', 'models', 'util']
 
 from .api import EpitechAPI

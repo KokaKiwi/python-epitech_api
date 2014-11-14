@@ -1,5 +1,5 @@
 from ..models import SimpleModel, create_getter
-from cached_property import cached_property
+from ..util import cached_property
 
 class Student(SimpleModel):
     INTRA_PATH = '/user/{login}'

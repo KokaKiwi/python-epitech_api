@@ -1,7 +1,7 @@
 import arrow
 from ..models import SimpleModel, create_getter
 from collections import OrderedDict
-from cached_property import cached_property
+from ..util import cached_property
 
 class NetsoulStat(object):
     def __init__(self, data):

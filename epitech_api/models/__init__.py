@@ -1,5 +1,5 @@
 import logging
-from cached_property import cached_property
+from ..util import cached_property
 
 __all__ = ['student', 'netsoul', 'marks']
 
@@ -21,6 +21,9 @@ class SimpleModel(Model):
     def data(self):
         res = self.api.request(self.url)
         return res.json()
+
+    def reset_data_cache(self):
+        delattr(self, 'data')
 
     get = lambda self, name, default=None: self.data.get(name, default)
     __getitem__ = lambda self, name: self.get(name)

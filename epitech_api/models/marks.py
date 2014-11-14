@@ -1,7 +1,7 @@
 import arrow
 from ..models import SimpleModel, create_getter, array_map_filter
 from collections import OrderedDict
-from cached_property import cached_property
+from ..util import cached_property
 
 class Mark(object):
     def __init__(self, marks, data):

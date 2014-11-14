@@ -1,6 +1,6 @@
 import logging
 import requests
-from cached_property import cached_property
+from .util import cached_property
 
 class Credentials(object):
     def __init__(self, login, password):

@@ -20,6 +20,5 @@ setup(
     install_requires=[
         'arrow',                # For better date handling
         'requests',             # For HTTP requests
-        'cached-property',      # For results caching
     ],
 )
